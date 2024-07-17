@@ -1,12 +1,8 @@
-/* altura de las imagenes del carrusel 
 
-.h-item{
-    height: 500px;
+
+.carousel-item {
+  object-fit: cover;
 }
-.h-img{
-    height: 100%;
-    object-fit: cover;
-}*/
 
 /* Tamaño de las imagenes del carrusel en pantalla grande (desktops) */
 @media (min-width: 768px) {
