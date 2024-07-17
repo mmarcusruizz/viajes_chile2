@@ -1,0 +1,53 @@
+
+
+.testimonios {
+
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+    &__title {
+      text-align: center;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    &__column {
+      width: calc(33.33% - 20px); /* ajusta el ancho proporcional*/
+      margin-bottom: 20px;
+    }
+  
+    &__text {
+      text-align: center;
+      font-style: italic;
+    }
+  
+    &__image {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 20px auto;
+      display: block;
+    }
+  
+    &__name {
+      text-align: center;
+      font-weight: bold;
+    }
+    /*para viewports pequeños*/
+    @media (max-width: 768px) {
+        .testimonios__container {
+          flex-direction: column; /* apila las columnas */
+        }
+        .testimonios__column {
+            width: calc(100% - 20px); /* ajusta el ancho */
+        }
+      }
+  }
+  
+  

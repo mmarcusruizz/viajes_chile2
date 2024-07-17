@@ -1,29 +1,6 @@
-
-.4cards{
-    display: flex; 
-    flex-wrap: wrap;
-}
-
-
-
-@media (max-width: 768px) {
-    .card .row {
-      display: flex;
-      flex-direction: column;
-    }
-    .card-img{
-        width: 100%;
-        height:auto;
-        object-fit: cover;
-    }
-     
-}
-
-  @media (min-width: 769px) {
-    .card .row {
-      display: flex;
-      flex-direction: row;
-    }
-    
-
+.card-img {
+    height: 100%;
+    object-fit: cover;
+    max-height: 220px;
   }
+  

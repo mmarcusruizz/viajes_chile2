@@ -11972,8 +11972,53 @@ textarea.form-control-lg {
      object-fit: cover;
 }
 
+.testimonios {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /*para viewports pequeños*/
+}
+.testimonios__title {
+  text-align: center;
+}
+.testimonios__container {
+  display: flex;
+  justify-content: space-between;
+}
+.testimonios__column {
+  width: calc(33.33% - 20px); /* ajusta el ancho proporcional*/
+  margin-bottom: 20px;
+}
+.testimonios__text {
+  text-align: center;
+  font-style: italic;
+}
+.testimonios__image {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: block;
+}
+.testimonios__name {
+  text-align: center;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .testimonios .testimonios__container {
+    flex-direction: column; /* apila las columnas */
+  }
+  .testimonios .testimonios__column {
+    width: calc(100% - 20px); /* ajusta el ancho */
+  }
+}
+
 body {
   background-color: #0b1215;
+  color: aliceblue;
 }
 
 /* altura de las imagenes del carrusel 
@@ -12001,23 +12046,5 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .card .row {
-    display: flex;
-    flex-direction: column;
-  }
-  .card-img {
-    width: 100%;
-    height: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-@media (min-width: 769px) {
-  .card .row {
-    display: flex;
-    flex-direction: row;
-  }
+  max-height: 220px;
 }/*# sourceMappingURL=main.css.map */
