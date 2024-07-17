@@ -5,9 +5,223 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viajes Chile</title>
         <link rel="stylesheet" href="/assets/css/main.css">
+        <!--link fontawesome-->
+        <script src="https://kit.fontawesome.com/6dd675d803.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
+    <header>
+        <!--Navbar de bootstrap 5.3-->
+    <nav class="navbar navbar-expand-lg border-body d-flex fixed-top" style="height: 70px;">
+        <!--OPCIONAL: al nav se le agrega la clase "navbar-bg" al activar scroll, color definido en css-->
+        <div class="container-fluid">
+          <a class="navbar-brand ms-4" href="#">
+            <img src="./assets/img/viajes.svg" alt="Icono Viajes Chile" height="30" class="me-2"> Viajes Chile</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto pe-4">
+              <!--Se linkean con href las secciones a donde se va a desplazar-->
+              <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a> 
+              <a class="nav-link" href="#servicios">Servicios</a>
+              <a class="nav-link" href="#destacados">Destacados</a>
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main> 
+      <!--Sección Main con carrusel de bootstrap 5.3-->
+      <section id="inicio" class="mb-5">    
+          <!-- carrusel indicadores de slide-->
+          <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+          <div class="carousel-inner">
+          <!--imagenes del carrousel con sus captions-->
+            <div class="carousel-item h-item active">
+                <img src="./assets/img/carousel1.jpg" class="d-block w-100 h-img" alt="Paisaje desierto de atacama">
+                    <div class="carousel-caption top-1 mt-1 " >
+                        <p class=" fs-3">Paquete todo incluido</p>
+                        <h1 class="display-4 fw-bolder">San Pedro de Atacama</h1>
+                          <button class="btn btn-warning px-4 py-2 fs-5 mt-2" data-bs-toggle="modal" data-bs-target="#reservaModal">Reserva Ahora</button> <!--data-bs-toggle="modal" Activa un modal al hacer click en el botón y  data-bs-target="#reservaModal" define la ID del modal-->
+                    </div>
+            </div>
+              <!-- MODAL del Botón RESERVA AHROA-->
+              <div class="modal fade" id="reservaModal" tabindex="-1" aria-labelledby="reservaModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="reservaModalLabel">Reserva tu viaje a San Pedro de Atacama</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>¡Oferta por tiempo limitado!</p>
+                      <p>4 noches todo incluido, barra libre y fiesta en el desierto.</p>
+                      <img src="./assets/img/modal.jpeg" class="d-block w-100 h-img" alt="fiesta desierto de atacama">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Me da miedo</button>
+                      <button type="button" class="btn btn-primary">Reservar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <div class="carousel-item h-item">
+                <img src="./assets/img/carousel2.jpg" class="d-block w-100 h-img" alt="Paisaje estatuas moai isla de pascua">
+                    <div class="carousel-caption top-1 mt-1 " >
+                        <p class=" fs-3">Paquete todo incluido</p>
+                        <h1 class="display-4 fw-bolder">Isla de Pascua</h1>
+                        <button class="btn btn-warning px-4 py-2 fs-5 mt-2">Reserva Ahora</button>
+                    </div>     
+            </div>
+            <div class="carousel-item h-item">
+                <img src="./assets/img/carousel3.jpg" class="d-block  w-100 h-img" alt="Montañas cuernos del paine">
+                    <div class="carousel-caption top-1 mt-1 " >
+                        <p class=" fs-3">Paquete todo incluido</p>
+                        <h1 class="display-4 fw-bolder">Torres del Paine</h1>
+                        <button class="btn btn-warning px-4 py-2 fs-5 mt-2">Reserva Ahora</button>
+                    </div>
+            </div>
+          </div>
+          <!--botones de carrusel next y previus-->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+      </section> 
+    </main>
+
+    <!--Sección Quienes somos-->
+    <section class="container">
+      <h2 class="text-center mb-4 text-light">¿Quiénes somos?</h2> <hr class="mb-4 text-light">
+      <div class="row">
+          <div class="col-md-6 d-none d-md-block"> 
+            <img src="./assets/img/quienes-somos.jpg" class="img-somos img-fluid rounded" alt="Grupo de turistas amigos"> 
+          </div>
+          <div class="col-md-6 text-light">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatem nulla dolore aut provident amet atque labore dicta alias omnis, quis doloremque blanditiis ex ratione maxime error deleniti fugiat soluta?</p>
+              <br>
+              <p>Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis laboriosam voluptatem soluta nulla laudantium minus, quaerat dicta autem dolores, totam repellat inventore unde ipsa modi amet alias officiis, facere animi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium cupiditate doloribus ducimus minus porro odio ea dicta, qui non odit asperiores itaque eos recusandae quisquam nemo, eum sapiente nihil expedita?</p>
+          </div>
+      </div>
+    </section>
+
+    <!--Sección Destacados - cards -->
+    <section class="container py-5 destacados-section">
+      <h2 class="destacados-titulo text-center text-light">Destacados</h2>
+      <hr class="mb-4 text-light"> 
+      <div class="4cards row"><!--tarjetas-->
+        <div class="col-md-6 col-lg-6 col-sm-12 py-4">
+          <div class="card"> 
+            <div class="row">
+              <div class="col-4">
+                <img src="./assets/img/card1.jpg" alt="región de los lagos" class="card-img">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title">Región de Los Lagos</h3>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo quis diam mollis semper.</p>
+                  <div class="card-precio">
+                    <i class="fas fa-plane"></i>
+                    <span class="text-muted">Vuelos desde:</span>
+                    <span class="fw-bold">$159.990</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-12 py-4">
+          <div class="card">
+            <div class="row">
+              <div class="col-4">
+                <img src="./assets/img/card2.jpg" alt="laguna en Atacama" class="card-img">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title">Desierto de Atacama</h3>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo quis diam mollis semper.</p>
+                  <div class="card-precio">
+                    <i class="fas fa-plane"></i>
+                    <span class="text-muted">Vuelos desde:</span>
+                    <span class="fw-bold">$189.990</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="display: flex; flex-wrap: wrap;"><!--tarjeta-->
+        <div class="col-md-6 col-lg-6 col-sm-12 py-4">
+          <div class="card">
+            <div class="row">
+              <div class="col-4">
+                <img src="./assets/img/card3.jpg" alt="Salar en Atacama" class="card-img">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title">Norte grande de Chile</h3>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo quis diam mollis semper.</p>
+                  <div class="card-precio">
+                    <i class="fas fa-plane"></i>
+                    <span class="text-muted">Vuelos desde:</span>
+                    <span class="fw-bold">$289.990</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-12 py-4">
+          <div class="card">
+            <div class="row">
+              <div class="col-4">
+                <img src="./assets/img/card4.jpg" alt="sendero de un bosque" class="card-img">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title">Bosque Mágico</h3>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo quis diam mollis semper.</p>
+                  <div class="card-precio">
+                    <i class="fas fa-plane"></i>
+                    <span class="text-muted">Vuelos desde:</span>
+                    <span class="fw-bold">$259.990</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!--Sección Testimonios-->
+    <section>
+      
+    </section>
+  
+
+
+  
+
+
+
+
 
 
 

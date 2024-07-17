@@ -1,0 +1,22 @@
+/* altura de las imagenes del carrusel 
+
+.h-item{
+    height: 500px;
+}
+.h-img{
+    height: 100%;
+    object-fit: cover;
+}*/
+
+/* Tamaño de las imagenes del carrusel en pantalla grande (desktops) */
+@media (min-width: 768px) {
+    .carousel-item {
+      height: 500px;
+    }
+  }
+  /* en pantallas pequeñas (tablets y mobile) */
+  @media (max-width: 769px) {
+    .carousel-item {
+      height: 300px;
+    }
+  }
