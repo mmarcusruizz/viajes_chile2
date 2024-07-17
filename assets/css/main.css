@@ -12028,6 +12028,10 @@ body {
   color: aliceblue;
 }
 
+.link-color {
+  color: white; /*color del link*/
+}
+
 .navbar-bg {
   background-color: #287271; /* Example color, change as needed */
 }
@@ -12035,6 +12039,11 @@ body {
 .carousel-item {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/*fondo del caption del carrusel*/
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Tamaño de las imagenes del carrusel en pantalla grande (desktops) */
