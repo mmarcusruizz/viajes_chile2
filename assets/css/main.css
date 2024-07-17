@@ -12012,7 +12012,8 @@ textarea.form-control-lg {
     flex-direction: column; /* apila las columnas */
   }
   .testimonios .testimonios__column {
-    width: calc(100% - 20px); /* ajusta el ancho */
+    width: 100%; /* ajusta el ancho */
+    padding-inline: 40px;
   }
 }
 

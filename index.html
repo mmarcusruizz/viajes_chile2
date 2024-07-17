@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/assets/css/main.css">
         <!--link fontawesome-->
         <script src="https://kit.fontawesome.com/6dd675d803.js" crossorigin="anonymous"></script>
+        
 </head>
 <body>
     
@@ -232,6 +233,86 @@
         </div>
       </div>
     </section>
+
+    <!--Sección Contacto-->
+    <section class="contacto container py-5">
+        <h2 class="text-center mb-4">Contacto</h2>
+          <hr class="mb-4">
+      <div class="row">
+
+        <div id="alertContainer"></div>
+
+        <div class="col-lg-6 col-md-12 my-4">
+          <form>
+            <div class="row mb-3"> <!-- nuevo row para dejar nombre y apellido inline-->
+              <div class="col-md-6">
+                <label for="nombre" class="form-label" >Nombre<i class="fa-solid fa-circle-info ms-2" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Ingresa tu nombre o apodo"></i></label>
+                <input type="text" class="form-control" id="nombre">
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label"data-tippy-content="Ingresa tu dirección de correo electrónico.">E-mail<i class="fa-solid fa-circle-info ms-2" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Ingresa un email para responderte"></i></label>
+              <input type="email" class="form-control" id="email">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label"data-tippy-content="Ingresa aquí tu mensaje, consulta con confianza!.">Mensaje<i class="fa-solid fa-circle-info ms-2" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Escribenos tus consultas, recuerda ingresar cantidad de pasajeros (px) noches de estadía y destinos que deseas cotizar"></i></label>
+              <textarea class="form-control" id="mensaje" rows="3"></textarea>
+            </div>
+            <!--Checkbox con modal de terminos y condiciones-->
+            <div class="col-12">
+              <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label text-decoration-underline text-white" for="exampleCheck1"
+                      data-bs-toggle="modal" data-bs-target="#terminosycondiciones">
+                      Acepto los términos y condiciones
+                  </label>
+              </div>
+              <!-- Modal -->
+                <div class="modal fade" id="terminosycondiciones" tabindex="-1" aria-labelledby="terminosycondicionesLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title text-dark" id="terminosycondicionesLabel">Términos y Condiciones</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body text-dark">
+                        <!-- Aquí va el contenido de los términos y condiciones -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
+                        <p>Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-light" id="enviarBtn">Enviar</button>
+          </form>
+        </div>
+        <!--Datos de contacto-->
+        <div class="col-lg-6 col-md-12 mt-5">
+          <ul class="list-unstyled mt-4">
+            <li class="mb-3">
+              <i class="fa-solid fa-phone me-2"></i>
+              <a href="#">+55 555 555 5555</a>
+            </li>
+            <li class="mb-3">
+              <i class="fa-solid fa-envelope me-2"></i>
+              <a href="#">contacto@viajeschile.com</a>
+            </li>
+            <li class="mb-3">
+              <i class="fa-brands fa-linkedin me-2"></i>
+              <a href="#">Viajes_Chile</a>
+            </li>
+            <li class="mb-3">
+              <i class="fa-brands fa-square-instagram me-2"></i>
+              <a href="#">viajes_chile</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   
 
 
@@ -245,5 +326,6 @@
 
 
     <script type="module" src="/assets/js/index.js"></script>
+   
 </body>
 </html>
